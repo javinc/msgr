@@ -9,12 +9,9 @@ export default React.createClass({
             <div>
                 <h1>Main Page</h1>
                 <ul role="nav">
-                    <li><Link to="/about"
-                        activeClassName="active">About</Link></li>
-                    <li><Link to="/repos"
-                        activeClassName="active">Repos</Link></li>
-                    <li><Link to="/login"
-                        activeClassName="active">Login</Link></li>
+                    <li><NavLink to="/about">About</NavLink></li>
+                    <li><NavLink to="/repos">Repos</NavLink></li>
+                    <li><NavLink to="/login">Login</NavLink></li>
                 </ul>
 
                 {/* add this */}
