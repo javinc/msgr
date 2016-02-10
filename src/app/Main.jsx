@@ -8,7 +8,7 @@ export default React.createClass({
         return (
             <div>
                 <h1>Main Page</h1>
-                <ul role="nav">
+                <ul>
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/repos">Repos</NavLink></li>
                     <li><NavLink to="/login">Login</NavLink></li>

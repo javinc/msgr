@@ -4,9 +4,10 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Router, Route, hashHistory } from 'react-router';
 
 import Main from './Main'; // Our custom react component
-import Login from './Login'; // my cusotm page
-import About from './About'; // my cusotm page
-import Repos from './Repos'; // my cusotm page
+import Login from './Login'; // my custom page
+import About from './About'; // my custom page
+import Repos from './Repos'; // my custom page
+import Repo from './Repo'; // my custom page
 
 //Needed for onTouchTap
 //Can go away when react 1.0 release
@@ -22,6 +23,7 @@ ReactDOM.render(
             {/* make them children of `App` */}
             <Route path="repos" component={Repos}/>
             <Route path="about" component={About}/>
+            <Route path="repos/:userName/:repoName" component={Repo}/>
         </Route>
         <Route path="/login" component={Login}/>
         {/* add the routes here */}
