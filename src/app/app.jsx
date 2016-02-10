@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Main from './Main'; // Our custom react component
-
 import { Router, Route, hashHistory } from 'react-router'
+
+import Main from './Main'; // Our custom react component
+import Login from './Login'; // my cusotm page
 import About from './About'; // my cusotm page
 import Repos from './Repos'; // my cusotm page
 
@@ -17,9 +18,12 @@ injectTapEventPlugin();
 // For more details see: https://facebook.github.io/react/docs/top-level-api.html#react.render
 ReactDOM.render(
     <Router history={hashHistory}>
-        <Route path="/" component={Main}/>
+        <Route path="/" component={Main}>
+            {/* make them children of `App` */}
+            <Route path="repos" component={Repos}/>
+            <Route path="about" component={About}/>
+        </Route>
+        <Route path="/login" component={Login}/>
         {/* add the routes here */}
-        <Route path="/repos" component={Repos}/>
-        <Route path="/about" component={About}/>
       </Router>
     , document.getElementById('app'));
