@@ -33,29 +33,36 @@ export default React.createClass({
         });
     },
 
-    closeLeftNav() {
-        // toggle
-        this.setState({
-            navOpen: false
-        });
-    },
-
     render() {
         return (
             <div>
                 <AppBar
                     title="Msgr"
                     iconClassNameRight="muidocs-icon-navigation-expand-more"
-                    onLeftIconButtonTouchTap={this.toogleLeftNav}
-                />
+                    onTitleTouchTap={this.toogleLeftNav}
+                    onLeftIconButtonTouchTap={this.toogleLeftNav} />
 
                 <LeftNav
                     docked={false}
+                    onRequestChange={this.toogleLeftNav}
                     open={this.state.navOpen}>
-                    <NavMenu onTouchTap={this.closeLeftNav} to="/" onlyActiveOnIndex>Home</NavMenu>
-                    <NavMenu onTouchTap={this.closeLeftNav} to="/about">About</NavMenu>
-                    <NavMenu onTouchTap={this.closeLeftNav} to="/repos">Repos</NavMenu>
-                    <NavMenu onTouchTap={this.closeLeftNav} to="/login">Logout</NavMenu>
+                    <AppBar
+                        title="Menu"
+                        showMenuIconButton={false}
+                        onTitleTouchTap={this.toogleLeftNav} />
+                    <NavMenu
+                        onTouchTap={this.toogleLeftNav}
+                        onlyActiveOnIndex
+                        to="/">Home</NavMenu>
+                    <NavMenu
+                        onTouchTap={this.toogleLeftNav}
+                        to="/about">About</NavMenu>
+                    <NavMenu
+                        onTouchTap={this.toogleLeftNav}
+                        to="/repos">Repos</NavMenu>
+                    <NavMenu
+                        onTouchTap={this.toogleLeftNav}
+                        to="/login">Logout</NavMenu>
                 </LeftNav>
 
                 {/* content */}
