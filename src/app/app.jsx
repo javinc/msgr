@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, hashHistory } from 'react-router';
 
 import Main from './Main'; // Our custom react component
 import Login from './Login'; // my cusotm page
