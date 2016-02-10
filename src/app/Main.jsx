@@ -9,9 +9,10 @@ export default React.createClass({
             <div>
                 <h1>Main Page</h1>
                 <ul>
+                    <li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/repos">Repos</NavLink></li>
-                    <li><NavLink to="/login">Login</NavLink></li>
+                    <li><NavLink to="/login">Logout</NavLink></li>
                 </ul>
 
                 {/* add this */}
