@@ -7,6 +7,10 @@ body {
   line-height: 20px;
 }
 
+.container {
+    text-align: center;
+}
+
 .active {
   color: green;
 }

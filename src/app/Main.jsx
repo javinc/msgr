@@ -15,7 +15,7 @@ export default React.createClass({
                     <li><NavLink to="/login">Logout</NavLink></li>
                 </ul>
 
-                {/* add this */}
+                {/* content */}
                 {this.props.children}
             </div>
         )
