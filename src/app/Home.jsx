@@ -4,7 +4,7 @@ export default React.createClass({
     render() {
         return (
             <section>
-                <h1>About Page</h1>
+                <h1>Home Page</h1>
             </section>
         )
     }

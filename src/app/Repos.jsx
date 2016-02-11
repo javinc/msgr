@@ -5,7 +5,7 @@ import NavLink from './NavLink';
 export default React.createClass({
     render() {
         return (
-            <div>
+            <section>
                 <h1>Repos Page</h1>
                 <ul>
                     <li><NavLink to="/repos/james/puto">Repo 1</NavLink></li>
@@ -13,7 +13,7 @@ export default React.createClass({
                 </ul>
 
                 {this.props.children}
-            </div>
+            </section>
         )
     }
 })

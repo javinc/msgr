@@ -41,7 +41,6 @@ export default React.createClass({
                     iconClassNameRight="muidocs-icon-navigation-expand-more"
                     onTitleTouchTap={this.toogleLeftNav}
                     onLeftIconButtonTouchTap={this.toogleLeftNav} />
-
                 <LeftNav
                     docked={false}
                     onRequestChange={this.toogleLeftNav}
